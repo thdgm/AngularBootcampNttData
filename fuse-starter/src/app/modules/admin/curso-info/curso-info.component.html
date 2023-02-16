@@ -1,0 +1,37 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+  <div class="flex-auto p-6 sm:p-10">
+
+
+    <fuse-fullscreen></fuse-fullscreen>
+
+    <fuse-card class = "flex flex-col px-8 py-6 pb-4" #fuseCard>
+      <mat-card-header>
+        <mat-card-title>Información del curso</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <strong>Numero: </strong> {{cursoInfo.numero}}
+          <br>
+          <strong>Letra: </strong>{{cursoInfo.letra}}
+          <br>
+          <strong>Centro: </strong>{{cursoInfo.centro}}
+        <p>
+      </mat-card-content>
+    </fuse-card>
+    
+    <mat-card class = "cardInfoCursoAlumnos">
+      <mat-card-header>
+        <mat-card-subtitle>Contiene estos alumnos</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-selection-list #alumns>
+          <mat-list-option *ngFor="let alumno of alumnos">
+            <p>{{alumno.nombre}}</p>
+          </mat-list-option>
+        </mat-selection-list>
+      </mat-card-content>
+      </mat-card>
+</div>
+</div>
+
